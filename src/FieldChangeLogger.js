@@ -12,7 +12,7 @@ class FieldChangeLogger {
   constructor(oldValueFn, logFormatter) {
     if (typeof oldValueFn !== "function") {
       console.warn(
-        "FieldChangeLogger: 您需要提供一个函数用于获取字段初始值，否则将使用一个总是返回undefined的默认函数作为替代"
+        "FieldChangeLogger: 您需要提供一个函数用于获取字段初始值，否则将使用一个总是返回undefined的默认函数作为替代",
       );
       this.getOldValue = () => undefined;
     } else {

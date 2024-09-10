@@ -133,17 +133,11 @@ async function validateA(context) {
     // 可以 throw 一个字符串
     throw "xxxx不一致，校验失败";
     // 一个 jsx
-    throw (
-      <div style={{ color: "red", fontSize: "18px" }}>xxxx不一致，校验失败</div>
-    );
+    throw <div style={{ color: "red", fontSize: "18px" }}>xxxx不一致，校验失败</div>;
     // 一个 Error
     throw Error("xxxx不一致，校验失败");
     // 或者一个字符串数组，适用于需要对子表进行校验的场景
-    throw [
-      "子表中的以下数据校验失败",
-      "第 1 条数据，xxx和xxx不匹配",
-      "第 2 条数据，缺少xxx",
-    ];
+    throw ["子表中的以下数据校验失败", "第 1 条数据，xxx和xxx不匹配", "第 2 条数据，缺少xxx"];
   }
 }
 

@@ -1,11 +1,4 @@
-import {
-  sleep,
-  retry,
-  isEmpty,
-  dateTimeFormat,
-  generateRandomId,
-  round,
-} from "../src/utils";
+import { sleep, retry, isEmpty, dateTimeFormat, generateRandomId, round } from "../src/utils";
 
 describe("sleep function", () => {
   test("resolved after 300ms", () => {
@@ -29,7 +22,7 @@ describe("retry function", () => {
         expect(alwaysReject.mock.calls).toHaveLength(4);
         expect(end - start).toBeGreaterThanOrEqual(900);
         expect(end - start).toBeLessThan(1000);
-      }
+      },
     );
   });
   test("retry 5 times", () => {
@@ -42,7 +35,7 @@ describe("retry function", () => {
         expect(alwaysReject.mock.calls).toHaveLength(6);
         expect(end - start).toBeGreaterThanOrEqual(1500);
         expect(end - start).toBeLessThan(1600);
-      }
+      },
     );
   });
   test("retry delay 500ms", () => {
@@ -54,7 +47,7 @@ describe("retry function", () => {
         const end = Date.now();
         expect(end - start).toBeGreaterThanOrEqual(1500);
         expect(end - start).toBeLessThan(1600);
-      }
+      },
     );
   });
 });

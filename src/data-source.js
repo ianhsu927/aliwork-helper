@@ -12,7 +12,7 @@ import { getFieldTypeById } from "./field";
  * @param {string} connectorName 连接器名称，数据源面板中添加连接器时配置的名称
  * @param {object} params 连接器执行动作参数
  * @returns {Promise<object>}
- * 
+ *
  * @example
  * // 假设要通过连接器调用钉钉接口获取部门下的子部门信息
  * invokeConnector(this, "subDepts", {
@@ -30,7 +30,7 @@ import { getFieldTypeById } from "./field";
  */
 async function invokeConnector(context, connectorName, params) {
   const resp = await context.dataSourceMap[connectorName].load({
-    inputs: JSON.stringify(params)
+    inputs: JSON.stringify(params),
   });
 
   return resp;
@@ -171,12 +171,7 @@ async function fetchSubformDatas(
  *    console.log(`获取失败：${e.message}`);
  *  });
  */
-async function fetchSubformDatasAll(
-  context,
-  formUuid,
-  formInstanceId,
-  tableFieldId
-) {
+async function fetchSubformDatasAll(context, formUuid, formInstanceId, tableFieldId) {
   if (!context) {
     throw Error("context is required");
   }
@@ -594,13 +589,7 @@ async function searchFormDataIds(
  *   }
  * );
  */
-async function searchFormDataIdsAll(
-  context,
-  type,
-  formUuid,
-  searchFieldObject,
-  options
-) {
+async function searchFormDataIdsAll(context, type, formUuid, searchFieldObject, options) {
   if (!type) type = "form";
 
   let allIds = [];
@@ -886,13 +875,7 @@ async function searchFormDatas(
  *   }
  * );
  */
-async function searchFormDatasAll(
-  context,
-  type,
-  formUuid,
-  searchFieldObject,
-  options
-) {
+async function searchFormDatasAll(context, type, formUuid, searchFieldObject, options) {
   if (!type) type = "form";
 
   let allFormDatas = [];

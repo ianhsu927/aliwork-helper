@@ -242,12 +242,7 @@ function generateEmployeeFieldData(id, name, multiple = true) {
  *
  * this.$("associationFormField_lrh5sl2u").setValue(associationForm);
  */
-function generateAssociationFormFieldData(
-  appType,
-  formUuid,
-  formType,
-  instances
-) {
+function generateAssociationFormFieldData(appType, formUuid, formType, instances) {
   if (!Array.isArray(instances)) return null;
 
   return instances.map((item) => ({
@@ -435,9 +430,7 @@ function fieldToString(value, fieldType) {
       break;
     case "cascadeDate": {
       const { start, end } = value;
-      const startStr = start
-        ? dateTimeFormat(new Date(start), "YYYY-MM-DD")
-        : "";
+      const startStr = start ? dateTimeFormat(new Date(start), "YYYY-MM-DD") : "";
       const endStr = start ? dateTimeFormat(new Date(end), "YYYY-MM-DD") : "";
 
       str = `${startStr}至${endStr}`;
@@ -472,9 +465,7 @@ function fieldToString(value, fieldType) {
       str = `[${value.map((item) => item.name).join(",")}]`;
       break;
     case "address": {
-      const regionText = (value.regionText || [])
-        .map((item) => item.zh_CN)
-        .join("");
+      const regionText = (value.regionText || []).map((item) => item.zh_CN).join("");
       const address = value.address || "";
       str = `${regionText}${address}`;
     }

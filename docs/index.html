@@ -1,111 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Home - Aliwork helper</title>
-    
+
     <meta name="description" content="宜搭前端 JS 工具代码库" />
-    
-        <meta name="keywords" content="Aliwork 宜搭 工具库" />
-        <meta name="keyword" content="Aliwork 宜搭 工具库" />
-    
-    
-    
+
+    <meta name="keywords" content="Aliwork 宜搭 工具库" />
+    <meta name="keyword" content="Aliwork 宜搭 工具库" />
+
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css" />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css" />
     <script src="scripts/nav.js" defer></script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="navicon-button x">
+      <div class="navicon"></div>
+    </label>
 
-<label for="nav-trigger" class="overlay"></label>
+    <label for="nav-trigger" class="overlay"></label>
 
-<nav >
-    
-    <input type="text" id="nav-search" placeholder="Search" />
-    
-    
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/hackingzhang/aliwork-helper" target="_blank" class="menu-item" >Github</a></h2><h2><a href="https://gitee.com/hexzhangshuai/aliwork-helper" target="_blank" class="menu-item" >Gitee码云</a></h2><h2><a href="https://docs.aliwork.com/docs/developer/api/about" target="_blank" class="menu-item" >宜搭开放API</a></h2><h3>Modules</h3><ul><li><a href="module-BatchTaskRunner.html">BatchTaskRunner</a></li><li><a href="module-DataLinkage.html">DataLinkage</a><ul class='methods'><li data-type='method'><a href="module-DataLinkage.html#.dataLinkage">dataLinkage</a></li><li data-type='method'><a href="module-DataLinkage.html#.dataLinkageSubform">dataLinkageSubform</a></li><li data-type='method'><a href="module-DataLinkage.html#~resolveConditionMap">resolveConditionMap</a></li></ul></li><li><a href="module-DataSource.html">DataSource</a><ul class='methods'><li data-type='method'><a href="module-DataSource.html#.deleteFormData">deleteFormData</a></li><li data-type='method'><a href="module-DataSource.html#.executeTask">executeTask</a></li><li data-type='method'><a href="module-DataSource.html#.fetchSubformDatas">fetchSubformDatas</a></li><li data-type='method'><a href="module-DataSource.html#.fetchSubformDatasAll">fetchSubformDatasAll</a></li><li data-type='method'><a href="module-DataSource.html#.getFormData">getFormData</a></li><li data-type='method'><a href="module-DataSource.html#.getOperationRecords">getOperationRecords</a></li><li data-type='method'><a href="module-DataSource.html#.invokeConnector">invokeConnector</a></li><li data-type='method'><a href="module-DataSource.html#.saveFormData">saveFormData</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDataIds">searchFormDataIds</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDataIdsAll">searchFormDataIdsAll</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDatas">searchFormDatas</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDatasAll">searchFormDatasAll</a></li><li data-type='method'><a href="module-DataSource.html#.startInstance">startInstance</a></li><li data-type='method'><a href="module-DataSource.html#.updateFormData">updateFormData</a></li></ul></li><li><a href="module-Field.html">Field</a><ul class='methods'><li data-type='method'><a href="module-Field.html#.activateTabItems">activateTabItems</a></li><li data-type='method'><a href="module-Field.html#.fieldToString">fieldToString</a></li><li data-type='method'><a href="module-Field.html#.fieldValueDiff">fieldValueDiff</a></li><li data-type='method'><a href="module-Field.html#.fieldValueEqualSingle">fieldValueEqualSingle</a></li><li data-type='method'><a href="module-Field.html#.generateAssociationFormFieldData">generateAssociationFormFieldData</a></li><li data-type='method'><a href="module-Field.html#.generateDptFieldData">generateDptFieldData</a></li><li data-type='method'><a href="module-Field.html#.generateEmployeeFieldData">generateEmployeeFieldData</a></li><li data-type='method'><a href="module-Field.html#.getFieldDataTypeById">getFieldDataTypeById</a></li><li data-type='method'><a href="module-Field.html#.getFieldTypeById">getFieldTypeById</a></li><li data-type='method'><a href="module-Field.html#.mergeTo">mergeTo</a></li><li data-type='method'><a href="module-Field.html#.syncTo">syncTo</a></li></ul></li><li><a href="module-Subform.html">Subform</a><ul class='methods'><li data-type='method'><a href="module-Subform.html#.associateForm2Subform">associateForm2Subform</a></li><li data-type='method'><a href="module-Subform.html#.sum2Main">sum2Main</a></li><li data-type='method'><a href="module-Subform.html#~resolveFieldMaps">resolveFieldMaps</a></li></ul></li><li><a href="module-UI.html">UI</a><ul class='methods'><li data-type='method'><a href="module-UI.html#.dialog">dialog</a></li><li data-type='method'><a href="module-UI.html#.hijackSubmit">hijackSubmit</a></li><li data-type='method'><a href="module-UI.html#.loading">loading</a></li></ul></li><li><a href="module-Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="module-Utils.html#.dateTimeFormat">dateTimeFormat</a></li><li data-type='method'><a href="module-Utils.html#.generateRandomId">generateRandomId</a></li><li data-type='method'><a href="module-Utils.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="module-Utils.html#.retry">retry</a></li><li data-type='method'><a href="module-Utils.html#.round">round</a></li><li data-type='method'><a href="module-Utils.html#.sleep">sleep</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="FieldChangeLogger.html">FieldChangeLogger</a><ul class='methods'><li data-type='method'><a href="FieldChangeLogger.html#change">change</a></li><li data-type='method'><a href="FieldChangeLogger.html#clear">clear</a></li><li data-type='method'><a href="FieldChangeLogger.html#format">format</a></li></ul></li><li><a href="module-BatchTaskRunner-BatchTaskRunner.html">BatchTaskRunner</a><ul class='methods'><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_checkTaskProvider">_checkTaskProvider</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_doBatchTask">_doBatchTask</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_getTask">_getTask</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#start">start</a></li></ul></li><li><a href="module-Subform-Subform.html">Subform</a><ul class='methods'><li data-type='method'><a href="module-Subform-Subform.html#getDatas">getDatas</a></li><li data-type='method'><a href="module-Subform-Subform.html#getFormGroupId">getFormGroupId</a></li><li data-type='method'><a href="module-Subform-Subform.html#getFormGroupIds">getFormGroupIds</a></li><li data-type='method'><a href="module-Subform-Subform.html#getIndex">getIndex</a></li><li data-type='method'><a href="module-Subform-Subform.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-Subform-Subform.html#getItem">getItem</a></li><li data-type='method'><a href="module-Subform-Subform.html#setDatas">setDatas</a></li><li data-type='method'><a href="module-Subform-Subform.html#summary">summary</a></li><li data-type='method'><a href="module-Subform-Subform.html#updateItem">updateItem</a></li></ul></li></ul>
-    
-</nav>
+    <nav>
+      <input type="text" id="nav-search" placeholder="Search" />
 
-<div id="main">
-    
+      <h2><a href="index.html">Home</a></h2>
+      <h2>
+        <a href="https://github.com/hackingzhang/aliwork-helper" target="_blank" class="menu-item"
+          >Github</a
+        >
+      </h2>
+      <h2>
+        <a href="https://gitee.com/hexzhangshuai/aliwork-helper" target="_blank" class="menu-item"
+          >Gitee码云</a
+        >
+      </h2>
+      <h2>
+        <a
+          href="https://docs.aliwork.com/docs/developer/api/about"
+          target="_blank"
+          class="menu-item"
+          >宜搭开放API</a
+        >
+      </h2>
+      <h3>Modules</h3>
+      <ul>
+        <li><a href="module-BatchTaskRunner.html">BatchTaskRunner</a></li>
+        <li>
+          <a href="module-DataLinkage.html">DataLinkage</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-DataLinkage.html#.dataLinkage">dataLinkage</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataLinkage.html#.dataLinkageSubform">dataLinkageSubform</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataLinkage.html#~resolveConditionMap">resolveConditionMap</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-DataSource.html">DataSource</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-DataSource.html#.deleteFormData">deleteFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.executeTask">executeTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.fetchSubformDatas">fetchSubformDatas</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.fetchSubformDatasAll">fetchSubformDatasAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.getFormData">getFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.getOperationRecords">getOperationRecords</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.invokeConnector">invokeConnector</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.saveFormData">saveFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDataIds">searchFormDataIds</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDataIdsAll">searchFormDataIdsAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDatas">searchFormDatas</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDatasAll">searchFormDatasAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.startInstance">startInstance</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.updateFormData">updateFormData</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Field.html">Field</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Field.html#.activateTabItems">activateTabItems</a>
+            </li>
+            <li data-type="method"><a href="module-Field.html#.fieldToString">fieldToString</a></li>
+            <li data-type="method">
+              <a href="module-Field.html#.fieldValueDiff">fieldValueDiff</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.fieldValueEqualSingle">fieldValueEqualSingle</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateAssociationFormFieldData"
+                >generateAssociationFormFieldData</a
+              >
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateDptFieldData">generateDptFieldData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateEmployeeFieldData">generateEmployeeFieldData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.getFieldDataTypeById">getFieldDataTypeById</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.getFieldTypeById">getFieldTypeById</a>
+            </li>
+            <li data-type="method"><a href="module-Field.html#.mergeTo">mergeTo</a></li>
+            <li data-type="method"><a href="module-Field.html#.syncTo">syncTo</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Subform.html">Subform</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Subform.html#.associateForm2Subform">associateForm2Subform</a>
+            </li>
+            <li data-type="method"><a href="module-Subform.html#.sum2Main">sum2Main</a></li>
+            <li data-type="method">
+              <a href="module-Subform.html#~resolveFieldMaps">resolveFieldMaps</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-UI.html">UI</a>
+          <ul class="methods">
+            <li data-type="method"><a href="module-UI.html#.dialog">dialog</a></li>
+            <li data-type="method"><a href="module-UI.html#.hijackSubmit">hijackSubmit</a></li>
+            <li data-type="method"><a href="module-UI.html#.loading">loading</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Utils.html">Utils</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Utils.html#.dateTimeFormat">dateTimeFormat</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Utils.html#.generateRandomId">generateRandomId</a>
+            </li>
+            <li data-type="method"><a href="module-Utils.html#.isEmpty">isEmpty</a></li>
+            <li data-type="method"><a href="module-Utils.html#.retry">retry</a></li>
+            <li data-type="method"><a href="module-Utils.html#.round">round</a></li>
+            <li data-type="method"><a href="module-Utils.html#.sleep">sleep</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Classes</h3>
+      <ul>
+        <li>
+          <a href="FieldChangeLogger.html">FieldChangeLogger</a>
+          <ul class="methods">
+            <li data-type="method"><a href="FieldChangeLogger.html#change">change</a></li>
+            <li data-type="method"><a href="FieldChangeLogger.html#clear">clear</a></li>
+            <li data-type="method"><a href="FieldChangeLogger.html#format">format</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-BatchTaskRunner-BatchTaskRunner.html">BatchTaskRunner</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_checkTaskProvider"
+                >_checkTaskProvider</a
+              >
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_doBatchTask">_doBatchTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_getTask">_getTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#start">start</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Subform-Subform.html">Subform</a>
+          <ul class="methods">
+            <li data-type="method"><a href="module-Subform-Subform.html#getDatas">getDatas</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getFormGroupId">getFormGroupId</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getFormGroupIds">getFormGroupIds</a>
+            </li>
+            <li data-type="method"><a href="module-Subform-Subform.html#getIndex">getIndex</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getInstance">getInstance</a>
+            </li>
+            <li data-type="method"><a href="module-Subform-Subform.html#getItem">getItem</a></li>
+            <li data-type="method"><a href="module-Subform-Subform.html#setDatas">setDatas</a></li>
+            <li data-type="method"><a href="module-Subform-Subform.html#summary">summary</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#updateItem">updateItem</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-    
+    <div id="main">
+      <section class="package">
+        <h3></h3>
+      </section>
 
-
-
-    
-
-
-    <section class="package">
-        <h3> </h3>		
-    </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    <section class="readme usertext">
-        <article><h1>Aliwork-helper: 宜搭前端 JS 工具代码库</h1>
-<p>本仓库提供了了一些钉钉宜搭前端 JS 开发常用的工具方法，包括跨应用数据源 API 封装、UI 工具函数、字段值处理、常用场景封装等，旨在提高宜搭前端开发效率。</p>
-<h2>文档</h2>
-<p>文档使用 JSDoc 生成，可以在当前仓库的 docs 目录下只找到，或者<a href="https://hackingzhang.github.io/aliwork-helper/">查看在线文档</a>。</p>
-<h2>如何使用</h2>
-<p><strong>推荐使用<a href="#%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF">代码模板</a>来组织宜搭 JS 代码</strong></p>
-<ol>
-<li>
-<h2>引入 JS 库</h2>
-<p><strong>我们不提供本库的 CDN 或者公共访问托管，请自行解决托管问题</strong><br>
-在 didMount 函数中加入以下代码来加载 Aliwork-helper：</p>
-<pre class="prettyprint source lang-Javascript"><code>this.utils.loadScript(&quot;url-to-aliwork-helper.min.js&quot;).then(() => {
+      <section class="readme usertext">
+        <article>
+          <h1>Aliwork-helper: 宜搭前端 JS 工具代码库</h1>
+          <p>
+            本仓库提供了了一些钉钉宜搭前端 JS 开发常用的工具方法，包括跨应用数据源 API 封装、UI
+            工具函数、字段值处理、常用场景封装等，旨在提高宜搭前端开发效率。
+          </p>
+          <h2>文档</h2>
+          <p>
+            文档使用 JSDoc 生成，可以在当前仓库的 docs 目录下只找到，或者<a
+              href="https://hackingzhang.github.io/aliwork-helper/"
+              >查看在线文档</a
+            >。
+          </p>
+          <h2>如何使用</h2>
+          <p>
+            <strong
+              >推荐使用<a href="#%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF">代码模板</a>来组织宜搭 JS
+              代码</strong
+            >
+          </p>
+          <ol>
+            <li>
+              <h2>引入 JS 库</h2>
+              <p>
+                <strong>我们不提供本库的 CDN 或者公共访问托管，请自行解决托管问题</strong><br />
+                在 didMount 函数中加入以下代码来加载 Aliwork-helper：
+              </p>
+              <pre
+                class="prettyprint source lang-Javascript"
+              ><code>this.utils.loadScript(&quot;url-to-aliwork-helper.min.js&quot;).then(() => {
    // 加载完成后会暴露 Awh 全局变量，所有方法函数/类均可以通过 Awh.xxx 访问
    console.log(Awh);
    Awh.dialog(this, &quot;show&quot;， &quot;提示&quot;, &quot;加载完成&quot;);
 });
 </code></pre>
-<p>一般情况下，只需要在 didMount 中加载一次即可全局访问 Awh。但是，如果有以下情况，则建议像上面那样先加载再调用，以免因为库文件未加载完成而报错。</p>
-<ul>
-<li>代码逻辑需要在页面加载完成后立即调用本库做一些事情</li>
-<li>组件设置了除“自定义”之外的默认值（通过快捷配置、公式或者数据联动），同时设置了 onChange 事件，且需要在事件回调中调用本库</li>
-</ul>
-</li>
-<li>
-<h2>复制源码到宜搭 JS 面板</h2>
-<p>找到需要的方法函数源代码，然后将整个函数定义复制到宜搭设计器动作面板。<br>
-在文档中可以通过下面的方法找到函数源码：<br>
-每一个方法参数列表下方都有一个 View Source 按钮，后面跟着方法所在的源文件和在源文件中的行数，如下图：<br>
-<img src="https://hackingzhang.github.io/aliwork-helper/assets/how-to-locate-source-code.png" alt="定位源代码"><br>
-点击行数即可跳转到源码页面。<br>
-<img src="https://hackingzhang.github.io/aliwork-helper/assets/locate-source-code.png" alt="定位源代码"></p>
-</li>
-</ol>
-<h2>代码模板</h2>
-<h3>宜搭 JS 模板</h3>
-<p>在使用宜搭 JS 实现复杂业务场景时，一不小心就会写出几千行的代码，而宜搭 JS 不支持模块化（当然，
-可以引入外部 JS），所以如何在单个文件内组织业务代码对应用的可维护性至关重要。推荐使用下面的模板来组织宜搭 JS 代码。</p>
-<pre class="prettyprint source lang-Javascript"><code>/**
+              <p>
+                一般情况下，只需要在 didMount 中加载一次即可全局访问
+                Awh。但是，如果有以下情况，则建议像上面那样先加载再调用，以免因为库文件未加载完成而报错。
+              </p>
+              <ul>
+                <li>代码逻辑需要在页面加载完成后立即调用本库做一些事情</li>
+                <li>
+                  组件设置了除“自定义”之外的默认值（通过快捷配置、公式或者数据联动），同时设置了
+                  onChange 事件，且需要在事件回调中调用本库
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2>复制源码到宜搭 JS 面板</h2>
+              <p>
+                找到需要的方法函数源代码，然后将整个函数定义复制到宜搭设计器动作面板。<br />
+                在文档中可以通过下面的方法找到函数源码：<br />
+                每一个方法参数列表下方都有一个 View Source
+                按钮，后面跟着方法所在的源文件和在源文件中的行数，如下图：<br />
+                <img
+                  src="https://hackingzhang.github.io/aliwork-helper/assets/how-to-locate-source-code.png"
+                  alt="定位源代码"
+                /><br />
+                点击行数即可跳转到源码页面。<br />
+                <img
+                  src="https://hackingzhang.github.io/aliwork-helper/assets/locate-source-code.png"
+                  alt="定位源代码"
+                />
+              </p>
+            </li>
+          </ol>
+          <h2>代码模板</h2>
+          <h3>宜搭 JS 模板</h3>
+          <p>
+            在使用宜搭 JS 实现复杂业务场景时，一不小心就会写出几千行的代码，而宜搭 JS
+            不支持模块化（当然， 可以引入外部
+            JS），所以如何在单个文件内组织业务代码对应用的可维护性至关重要。推荐使用下面的模板来组织宜搭
+            JS 代码。
+          </p>
+          <pre class="prettyprint source lang-Javascript"><code>/**
 * 尊敬的用户，你好：页面 JS 面板是高阶用法，一般不建议普通用户使用，如需使用，请确定你具备研发背景，能够自我排查问题。当然，你也可以咨询身边的技术顾问或者联系宜搭平台的技术支持获得服务（可能收费）。
 * 我们可以用 JS 面板来开发一些定制度高功能，比如：调用阿里云接口用来做图像识别、上报用户使用数据（如加载完成打点）等等。
 * 你可以点击面板上方的 「使用帮助」了解。
@@ -139,9 +352,11 @@ export function didMount() {
 }
 
 </code></pre>
-<h3>子表值变更事件处理函数模板</h3>
-<p>监听子表值变更，根据引起变更的原因执行不同的处理逻辑是一个较普遍的需求。这个模板罗列了大部分引起子表变更的原因，根据需求删除不需要的分支即可。</p>
-<pre class="prettyprint source lang-Javascript"><code>/**
+          <h3>子表值变更事件处理函数模板</h3>
+          <p>
+            监听子表值变更，根据引起变更的原因执行不同的处理逻辑是一个较普遍的需求。这个模板罗列了大部分引起子表变更的原因，根据需求删除不需要的分支即可。
+          </p>
+          <pre class="prettyprint source lang-Javascript"><code>/**
  * 子表数据变更事件模板
  * @param {object} param0
  */
@@ -167,9 +382,12 @@ export function onSubformChange({ extra }) {
   }
 }
 </code></pre>
-<h3>提交前校验事件模板</h3>
-<p>在一些复杂业务场景中可能需要编写 JS 在表单提交前实现一些复杂的校验，这些校验往往包含一些异步的操作，比如需要请求另外一个表单的数据来进行计算比对，并且显示自定义提示内容。此模板提供了对这类场景的最佳处理方法。</p>
-<pre class="prettyprint source lang-jsx"><code>/**
+          <h3>提交前校验事件模板</h3>
+          <p>
+            在一些复杂业务场景中可能需要编写 JS
+            在表单提交前实现一些复杂的校验，这些校验往往包含一些异步的操作，比如需要请求另外一个表单的数据来进行计算比对，并且显示自定义提示内容。此模板提供了对这类场景的最佳处理方法。
+          </p>
+          <pre class="prettyprint source lang-jsx"><code>/**
  * async/await风格的校验函数
  * @param {Object} context this上下文
  */
@@ -247,31 +465,25 @@ export function beforeSubmit() {
       throw e;
     });
 }
-</code></pre></article>
-    </section>
+</code></pre>
+        </article>
+      </section>
+    </div>
 
+    <br class="clear" />
 
+    <footer>
+      Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Wed
+      Jun 19 2024 12:08:14 GMT+0800 (中国标准时间) using the
+      <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    </footer>
 
+    <script>
+      prettyPrint();
+    </script>
+    <script src="scripts/polyfill.js"></script>
+    <script src="scripts/linenumber.js"></script>
 
-
-
-    
-    
-</div>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Wed Jun 19 2024 12:08:14 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
-</footer>
-
-<script>prettyPrint();</script>
-<script src="scripts/polyfill.js"></script>
-<script src="scripts/linenumber.js"></script>
-
-<script src="scripts/search.js" defer></script>
-
-
-
-</body>
+    <script src="scripts/search.js" defer></script>
+  </body>
 </html>

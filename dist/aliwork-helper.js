@@ -1,8 +1,12 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Awh = {}));
-})(this, (function (exports) { 'use strict';
+  typeof exports === "object" && typeof module !== "undefined"
+    ? factory(exports)
+    : typeof define === "function" && define.amd
+      ? define(["exports"], factory)
+      : ((global = typeof globalThis !== "undefined" ? globalThis : global || self),
+        factory((global.Awh = {})));
+})(this, function (exports) {
+  "use strict";
 
   /**
    * 一些辅助工具方法
@@ -199,7 +203,7 @@
    * @example
    * 0.1 + 0.2; // 0.30000000000000004
    * round(0.1 + 0.2); // 0.3
-   * 
+   *
    * 0.123 * 3.4; // 0.41819999999999996
    * round(0.123 * 3.4); // 0.42
    * round(0.123 * 3.4, 3); // 0.418
@@ -213,7 +217,6 @@
    * 表单/自定义页面字段相关方法
    * @module Field
    */
-
 
   /**
    * 激活Tab组件中所有Tab项，此方法用于解决在表单上使用Tab组件时嵌套在Tab内的组件会报错，
@@ -448,12 +451,7 @@
    *
    * this.$("associationFormField_lrh5sl2u").setValue(associationForm);
    */
-  function generateAssociationFormFieldData(
-    appType,
-    formUuid,
-    formType,
-    instances
-  ) {
+  function generateAssociationFormFieldData(appType, formUuid, formType, instances) {
     if (!Array.isArray(instances)) return null;
 
     return instances.map((item) => ({
@@ -641,9 +639,7 @@
         break;
       case "cascadeDate": {
         const { start, end } = value;
-        const startStr = start
-          ? dateTimeFormat(new Date(start), "YYYY-MM-DD")
-          : "";
+        const startStr = start ? dateTimeFormat(new Date(start), "YYYY-MM-DD") : "";
         const endStr = start ? dateTimeFormat(new Date(end), "YYYY-MM-DD") : "";
 
         str = `${startStr}至${endStr}`;
@@ -678,9 +674,7 @@
         str = `[${value.map((item) => item.name).join(",")}]`;
         break;
       case "address": {
-        const regionText = (value.regionText || [])
-          .map((item) => item.zh_CN)
-          .join("");
+        const regionText = (value.regionText || []).map((item) => item.zh_CN).join("");
         const address = value.address || "";
         str = `${regionText}${address}`;
       }
@@ -767,7 +761,6 @@
    * @module DataSource
    */
 
-
   /**
    * 调用连接器
    * @static
@@ -775,7 +768,7 @@
    * @param {string} connectorName 连接器名称，数据源面板中添加连接器时配置的名称
    * @param {object} params 连接器执行动作参数
    * @returns {Promise<object>}
-   * 
+   *
    * @example
    * // 假设要通过连接器调用钉钉接口获取部门下的子部门信息
    * invokeConnector(this, "subDepts", {
@@ -793,7 +786,7 @@
    */
   async function invokeConnector(context, connectorName, params) {
     const resp = await context.dataSourceMap[connectorName].load({
-      inputs: JSON.stringify(params)
+      inputs: JSON.stringify(params),
     });
 
     return resp;
@@ -872,7 +865,7 @@
     formInstanceId,
     tableFieldId,
     currentPage,
-    pageSize
+    pageSize,
   ) {
     if (!context) {
       throw Error("context is required");
@@ -934,12 +927,7 @@
    *    console.log(`获取失败：${e.message}`);
    *  });
    */
-  async function fetchSubformDatasAll(
-    context,
-    formUuid,
-    formInstanceId,
-    tableFieldId
-  ) {
+  async function fetchSubformDatasAll(context, formUuid, formInstanceId, tableFieldId) {
     if (!context) {
       throw Error("context is required");
     }
@@ -965,7 +953,7 @@
         formInstanceId,
         tableFieldId,
         currentPage,
-        pageSize
+        pageSize,
       );
       allsubformDatas = allsubformDatas.concat(subformDatas);
 
@@ -1027,11 +1015,9 @@
 
     let req;
     if (type === "form") {
-      req = context.dataSourceMap.getFormData
-        .load({ formInstId: instId })
-        .then((response) => {
-          return response.formData;
-        });
+      req = context.dataSourceMap.getFormData.load({ formInstId: instId }).then((response) => {
+        return response.formData;
+      });
     } else if (type === "process") {
       req = context.dataSourceMap.getProcessInstance
         .load({
@@ -1259,7 +1245,7 @@
     searchFieldObject,
     currentPage,
     pageSize,
-    options
+    options,
   ) {
     if (!context) {
       throw Error("context is required");
@@ -1357,13 +1343,7 @@
    *   }
    * );
    */
-  async function searchFormDataIdsAll(
-    context,
-    type,
-    formUuid,
-    searchFieldObject,
-    options
-  ) {
+  async function searchFormDataIdsAll(context, type, formUuid, searchFieldObject, options) {
     if (!type) type = "form";
 
     let allIds = [];
@@ -1379,7 +1359,7 @@
         searchFieldObject,
         currentPage,
         pageSize,
-        options
+        options,
       );
       allIds = allIds.concat(ids);
 
@@ -1492,7 +1472,7 @@
     searchFieldObject,
     currentPage,
     pageSize,
-    options
+    options,
   ) {
     if (!context) {
       throw Error("context is required");
@@ -1649,13 +1629,7 @@
    *   }
    * );
    */
-  async function searchFormDatasAll(
-    context,
-    type,
-    formUuid,
-    searchFieldObject,
-    options
-  ) {
+  async function searchFormDatasAll(context, type, formUuid, searchFieldObject, options) {
     if (!type) type = "form";
 
     let allFormDatas = [];
@@ -1671,7 +1645,7 @@
         searchFieldObject,
         currentPage,
         pageSize,
-        options
+        options,
       );
       allFormDatas = allFormDatas.concat(formDatas);
 
@@ -1724,7 +1698,7 @@
     type,
     instanceId,
     updateFormData,
-    useLatestVersion = false
+    useLatestVersion = false,
   ) {
     if (!context) throw Error("context is required");
     if (!instanceId) throw Error("instanceId is required");
@@ -1834,7 +1808,7 @@
     result,
     remark,
     formData,
-    noExecuteExpressions
+    noExecuteExpressions,
   ) {
     if (!instanceId) throw Error("instanceId is required");
     if (!taskId) throw Error("taskId is required");
@@ -1985,7 +1959,7 @@
     constructor(oldValueFn, logFormatter) {
       if (typeof oldValueFn !== "function") {
         console.warn(
-          "FieldChangeLogger: 您需要提供一个函数用于获取字段初始值，否则将使用一个总是返回undefined的默认函数作为替代"
+          "FieldChangeLogger: 您需要提供一个函数用于获取字段初始值，否则将使用一个总是返回undefined的默认函数作为替代",
         );
         this.getOldValue = () => undefined;
       } else {
@@ -2045,16 +2019,15 @@
     }
   }
 
-  var FieldChangeLogger$1 = /*#__PURE__*/Object.freeze({
+  var FieldChangeLogger$1 = /*#__PURE__*/ Object.freeze({
     __proto__: null,
-    default: FieldChangeLogger
+    default: FieldChangeLogger,
   });
 
   /**
    * 子表单相关工具方法
    * @module Subform
    */
-
 
   /**
    * summary 方法 option 参数类型定义
@@ -2100,9 +2073,7 @@
      * @private
      */
     noInstanceError() {
-      throw Error(
-        `无法获取到唯一标识为${this.tableFieldId}的子表单，请检查标识是否正确`
-      );
+      throw Error(`无法获取到唯一标识为${this.tableFieldId}的子表单，请检查标识是否正确`);
     }
 
     /**
@@ -2240,7 +2211,7 @@
           ignoreDuplicate: true,
           filter: () => true,
         },
-        option
+        option,
       );
 
       const subformDataList = this.getDatas();
@@ -2256,10 +2227,7 @@
         }
 
         // 跳过空数据
-        if (
-          option.ignoreEmpty &&
-          (fieldData === null || fieldData === undefined)
-        ) {
+        if (option.ignoreEmpty && (fieldData === null || fieldData === undefined)) {
           continue;
         }
 
@@ -2274,10 +2242,7 @@
             // 跳过空数据
             if (option.ignoreEmpty && fieldData === "") break;
             // 跳过重复数据
-            if (
-              option.ignoreDuplicate &&
-              sumData.some((item) => item === fieldData)
-            ) {
+            if (option.ignoreDuplicate && sumData.some((item) => item === fieldData)) {
               break;
             }
 
@@ -2323,10 +2288,7 @@
           case "dpt":
             for (const dpt of fieldData) {
               // 跳过重复数据
-              if (
-                option.ignoreDuplicate &&
-                sumData.some((item) => item.value === dpt.value)
-              ) {
+              if (option.ignoreDuplicate && sumData.some((item) => item.value === dpt.value)) {
                 continue;
               }
               sumData.push(dpt);
@@ -2365,14 +2327,7 @@
    *   sum2Main(this, "tableField_xyz", "textField_123", "textField_abc", "string", { appendMode: true });
    * }
    */
-  function sum2Main(
-    context,
-    tableFieldId,
-    fieldInSubform,
-    fieldInMainform,
-    dataType,
-    option
-  ) {
+  function sum2Main(context, tableFieldId, fieldInSubform, fieldInMainform, dataType, option) {
     dataType = dataType || "string";
     option = Object.assign(
       {
@@ -2382,7 +2337,7 @@
         filter: () => true,
         separator: ",",
       },
-      option
+      option,
     );
 
     const subform = new Subform(context, tableFieldId);
@@ -2430,11 +2385,7 @@
           const existData = fieldData || [];
           existData.forEach((dpt) => {
             // 跳过重复数据
-            if (
-              option.ignoreDuplicate &&
-              sumData.some((item) => item.value === dpt.value)
-            )
-              return;
+            if (option.ignoreDuplicate && sumData.some((item) => item.value === dpt.value)) return;
             sumData.unshift(dpt);
           });
           break;
@@ -2473,13 +2424,7 @@
    * @param {Object} mainFormData 主表数据，如果来源是关联表单子表则该字段传主表数据，否则传null
    * @returns {Object} 新的表单数据对象
    */
-  function resolveFieldMaps(
-    formData,
-    fieldMaps,
-    mainFormData,
-    associateForm,
-    formInstIdField
-  ) {
+  function resolveFieldMaps(formData, fieldMaps, mainFormData, associateForm, formInstIdField) {
     const dataItem = {
       [formInstIdField]: associateForm.instanceId,
     };
@@ -2568,14 +2513,12 @@
     fieldMaps,
     isDataFromSubform,
     remoteSubformId,
-    options
+    options,
   ) {
     formType = formType || "form";
     options = Object.assign({ keepOldData: true }, options);
     if (isDataFromSubform && !remoteSubformId) {
-      throw new Error(
-        "remoteSubformId is reqired while isDataFromSubform is set to true"
-      );
+      throw new Error("remoteSubformId is reqired while isDataFromSubform is set to true");
     }
 
     const associateForm = context.$(assocaiteFieldId).getValue() || [];
@@ -2593,7 +2536,7 @@
     }
     console.log(
       `%c[关联表单填充子表]需要从${formShouldInsert.length}个关联表单新增数据`,
-      "color: purple"
+      "color: purple",
     );
 
     // 2.找到需要从子表删除哪些关联表单数据，并删除
@@ -2610,10 +2553,7 @@
         removedDataCount += 1;
       }
     }
-    console.log(
-      `%c[关联表单填充子表]移除${removedDataCount}条子表数据`,
-      "color: purple"
-    );
+    console.log(`%c[关联表单填充子表]移除${removedDataCount}条子表数据`, "color: purple");
 
     // 3.获取关联表单数据，组装子表
     for (const form of formShouldInsert) {
@@ -2621,23 +2561,11 @@
       if (isDataFromSubform) {
         const subformDataList = formData[remoteSubformId] || [];
         for (const subformData of subformDataList) {
-          const newDataItem = resolveFieldMaps(
-            subformData,
-            fieldMaps,
-            null,
-            form,
-            formInstIdField
-          );
+          const newDataItem = resolveFieldMaps(subformData, fieldMaps, null, form, formInstIdField);
           newSubformDataList.push(newDataItem);
         }
       } else {
-        const newDataItem = resolveFieldMaps(
-          formData,
-          fieldMaps,
-          null,
-          form,
-          formInstIdField
-        );
+        const newDataItem = resolveFieldMaps(formData, fieldMaps, null, form, formInstIdField);
         newSubformDataList.push(newDataItem);
       }
     }
@@ -2645,7 +2573,7 @@
     context.$(localSubformId).setValue(newSubformDataList);
     console.log(
       `%c[关联表单填充子表]新增了${newSubformDataList.length}条子表数据`,
-      "color: purple"
+      "color: purple",
     );
   }
 
@@ -2654,7 +2582,6 @@
    * 功能上类似于宜搭表单的数据联动，即根据本表单数据作为条件从其他表单带数据到本表单
    * @module DataLinkage
    */
-
 
   /**
    * 条件规则映射项 ConditionMapItem
@@ -2673,21 +2600,14 @@
    *
    * @returns {Object} 用于查询目标表单的条件参数
    */
-  function resolveConditionMap(
-    context,
-    conditionMap,
-    tableFieldId,
-    changeItemIndex
-  ) {
+  function resolveConditionMap(context, conditionMap, tableFieldId, changeItemIndex) {
     const searchParams = {};
 
     if (!Array.isArray(conditionMap)) {
       return searchParams;
     }
     if (tableFieldId && changeItemIndex === undefined) {
-      console.warn(
-        "[resolveConditionMap]: 传入了子表唯一标识时必须传入子表行下标"
-      );
+      console.warn("[resolveConditionMap]: 传入了子表唯一标识时必须传入子表行下标");
     }
 
     let subformData = {};
@@ -2771,7 +2691,7 @@
     fillingFieldId,
     conditionMap,
     postProcessor,
-    stirctCondition = true
+    stirctCondition = true,
   ) {
     if (!targetFormUuid || !targetFieldId || !fillingFieldId) {
       return;
@@ -2786,7 +2706,7 @@
     // 2.查询目标表单获取关联字段值
     let fillValue = undefined;
     const containEmptyParam = Object.values(searchParams).some(
-      (value) => value === undefined || value === null || value === ""
+      (value) => value === undefined || value === null || value === "",
     );
     if (!(stirctCondition && containEmptyParam)) {
       let formDatas = await searchFormDatasAll(
@@ -2794,7 +2714,7 @@
         targetFormType,
         targetFormUuid,
         searchParams,
-        { strictQuery: true }
+        { strictQuery: true },
       );
       if (formDatas.length) {
         const formData = formDatas[0];
@@ -2811,7 +2731,7 @@
 
     console.log(
       `[子表数据联动]填充字段: ${fillingFieldId} 填充值: ${fillValue} 严格查询: ${stirctCondition} 查询参数: `,
-      searchParams
+      searchParams,
     );
   }
 
@@ -2868,30 +2788,23 @@
     fillingFieldId,
     conditionMap,
     postProcessor,
-    stirctCondition = true
+    stirctCondition = true,
   ) {
     if (!tableFieldId || !targetFormUuid || !targetFieldId || !fillingFieldId) {
       return;
     }
 
     // 1.组装查询参数
-    const changeItemIndex = (context.$(tableFieldId).getItems() || []).indexOf(
-      formGroupId
-    );
+    const changeItemIndex = (context.$(tableFieldId).getItems() || []).indexOf(formGroupId);
     let searchParams = {};
     if (Array.isArray(conditionMap)) {
-      searchParams = resolveConditionMap(
-        context,
-        conditionMap,
-        tableFieldId,
-        changeItemIndex
-      );
+      searchParams = resolveConditionMap(context, conditionMap, tableFieldId, changeItemIndex);
     }
 
     // 2.查询目标表单获取关联字段值
     let fillValue = undefined;
     const containEmptyParam = Object.values(searchParams).some(
-      (value) => value === undefined || value === null || value === ""
+      (value) => value === undefined || value === null || value === "",
     );
     if (!(stirctCondition && containEmptyParam)) {
       let formDatas = await searchFormDatasAll(
@@ -2899,7 +2812,7 @@
         targetFormType,
         targetFormUuid,
         searchParams,
-        { strictQuery: true }
+        { strictQuery: true },
       );
       if (formDatas.length) {
         const formData = formDatas[0];
@@ -2917,7 +2830,7 @@
 
     console.log(
       `[子表数据联动]子表ID: ${tableFieldId}, 填充字段: ${fillingFieldId} 填充值: ${fillValue} 严格查询: ${stirctCondition} 查询参数: `,
-      searchParams
+      searchParams,
     );
   }
 
@@ -2986,10 +2899,7 @@
       this._taskProvider = taskProvider;
       this._batchSize = batchSize || 1;
 
-      this._options = Object.assign(
-        { beforeBatchCb: () => {}, afterBatchCb: () => {} },
-        options
-      );
+      this._options = Object.assign({ beforeBatchCb: () => {}, afterBatchCb: () => {} }, options);
     }
 
     /**
@@ -3001,15 +2911,10 @@
     _checkTaskProvider(taskProvider) {
       if (typeof taskProvider === "function") {
         return "function";
-      } else if (
-        Symbol.iterator in taskProvider &&
-        typeof taskProvider.next === "function"
-      ) {
+      } else if (Symbol.iterator in taskProvider && typeof taskProvider.next === "function") {
         return "generator";
       } else {
-        throw Error(
-          "[BatchTaskRunner] taskProvider MUST be a function or generator"
-        );
+        throw Error("[BatchTaskRunner] taskProvider MUST be a function or generator");
       }
     }
 
@@ -3109,5 +3014,4 @@
   exports.sum2Main = sum2Main;
   exports.syncTo = syncTo;
   exports.updateFormData = updateFormData;
-
-}));
+});

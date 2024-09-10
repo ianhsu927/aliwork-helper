@@ -63,10 +63,7 @@ class BatchTaskRunner {
     this._taskProvider = taskProvider;
     this._batchSize = batchSize || 1;
 
-    this._options = Object.assign(
-      { beforeBatchCb: () => {}, afterBatchCb: () => {} },
-      options
-    );
+    this._options = Object.assign({ beforeBatchCb: () => {}, afterBatchCb: () => {} }, options);
   }
 
   /**
@@ -78,15 +75,10 @@ class BatchTaskRunner {
   _checkTaskProvider(taskProvider) {
     if (typeof taskProvider === "function") {
       return "function";
-    } else if (
-      Symbol.iterator in taskProvider &&
-      typeof taskProvider.next === "function"
-    ) {
+    } else if (Symbol.iterator in taskProvider && typeof taskProvider.next === "function") {
       return "generator";
     } else {
-      throw Error(
-        "[BatchTaskRunner] taskProvider MUST be a function or generator"
-      );
+      throw Error("[BatchTaskRunner] taskProvider MUST be a function or generator");
     }
   }
 

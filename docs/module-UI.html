@@ -1,210 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>UI - Aliwork helper</title>
-    
+
     <meta name="description" content="宜搭前端 JS 工具代码库" />
-    
-        <meta name="keywords" content="Aliwork 宜搭 工具库" />
-        <meta name="keyword" content="Aliwork 宜搭 工具库" />
-    
-    
-    
+
+    <meta name="keywords" content="Aliwork 宜搭 工具库" />
+    <meta name="keyword" content="Aliwork 宜搭 工具库" />
+
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css" />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css" />
     <script src="scripts/nav.js" defer></script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
-
-<label for="nav-trigger" class="overlay"></label>
-
-<nav >
-    
-    <input type="text" id="nav-search" placeholder="Search" />
-    
-    
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/hackingzhang/aliwork-helper" target="_blank" class="menu-item" >Github</a></h2><h2><a href="https://gitee.com/hexzhangshuai/aliwork-helper" target="_blank" class="menu-item" >Gitee码云</a></h2><h2><a href="https://docs.aliwork.com/docs/developer/api/about" target="_blank" class="menu-item" >宜搭开放API</a></h2><h3>Modules</h3><ul><li><a href="module-BatchTaskRunner.html">BatchTaskRunner</a></li><li><a href="module-DataLinkage.html">DataLinkage</a><ul class='methods'><li data-type='method'><a href="module-DataLinkage.html#.dataLinkage">dataLinkage</a></li><li data-type='method'><a href="module-DataLinkage.html#.dataLinkageSubform">dataLinkageSubform</a></li><li data-type='method'><a href="module-DataLinkage.html#~resolveConditionMap">resolveConditionMap</a></li></ul></li><li><a href="module-DataSource.html">DataSource</a><ul class='methods'><li data-type='method'><a href="module-DataSource.html#.deleteFormData">deleteFormData</a></li><li data-type='method'><a href="module-DataSource.html#.executeTask">executeTask</a></li><li data-type='method'><a href="module-DataSource.html#.fetchSubformDatas">fetchSubformDatas</a></li><li data-type='method'><a href="module-DataSource.html#.fetchSubformDatasAll">fetchSubformDatasAll</a></li><li data-type='method'><a href="module-DataSource.html#.getFormData">getFormData</a></li><li data-type='method'><a href="module-DataSource.html#.getOperationRecords">getOperationRecords</a></li><li data-type='method'><a href="module-DataSource.html#.invokeConnector">invokeConnector</a></li><li data-type='method'><a href="module-DataSource.html#.saveFormData">saveFormData</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDataIds">searchFormDataIds</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDataIdsAll">searchFormDataIdsAll</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDatas">searchFormDatas</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDatasAll">searchFormDatasAll</a></li><li data-type='method'><a href="module-DataSource.html#.startInstance">startInstance</a></li><li data-type='method'><a href="module-DataSource.html#.updateFormData">updateFormData</a></li></ul></li><li><a href="module-Field.html">Field</a><ul class='methods'><li data-type='method'><a href="module-Field.html#.activateTabItems">activateTabItems</a></li><li data-type='method'><a href="module-Field.html#.fieldToString">fieldToString</a></li><li data-type='method'><a href="module-Field.html#.fieldValueDiff">fieldValueDiff</a></li><li data-type='method'><a href="module-Field.html#.fieldValueEqualSingle">fieldValueEqualSingle</a></li><li data-type='method'><a href="module-Field.html#.generateAssociationFormFieldData">generateAssociationFormFieldData</a></li><li data-type='method'><a href="module-Field.html#.generateDptFieldData">generateDptFieldData</a></li><li data-type='method'><a href="module-Field.html#.generateEmployeeFieldData">generateEmployeeFieldData</a></li><li data-type='method'><a href="module-Field.html#.getFieldDataTypeById">getFieldDataTypeById</a></li><li data-type='method'><a href="module-Field.html#.getFieldTypeById">getFieldTypeById</a></li><li data-type='method'><a href="module-Field.html#.mergeTo">mergeTo</a></li><li data-type='method'><a href="module-Field.html#.syncTo">syncTo</a></li></ul></li><li><a href="module-Subform.html">Subform</a><ul class='methods'><li data-type='method'><a href="module-Subform.html#.associateForm2Subform">associateForm2Subform</a></li><li data-type='method'><a href="module-Subform.html#.sum2Main">sum2Main</a></li><li data-type='method'><a href="module-Subform.html#~resolveFieldMaps">resolveFieldMaps</a></li></ul></li><li><a href="module-UI.html">UI</a><ul class='methods'><li data-type='method'><a href="module-UI.html#.dialog">dialog</a></li><li data-type='method'><a href="module-UI.html#.hijackSubmit">hijackSubmit</a></li><li data-type='method'><a href="module-UI.html#.loading">loading</a></li></ul></li><li><a href="module-Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="module-Utils.html#.dateTimeFormat">dateTimeFormat</a></li><li data-type='method'><a href="module-Utils.html#.generateRandomId">generateRandomId</a></li><li data-type='method'><a href="module-Utils.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="module-Utils.html#.retry">retry</a></li><li data-type='method'><a href="module-Utils.html#.round">round</a></li><li data-type='method'><a href="module-Utils.html#.sleep">sleep</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="FieldChangeLogger.html">FieldChangeLogger</a><ul class='methods'><li data-type='method'><a href="FieldChangeLogger.html#change">change</a></li><li data-type='method'><a href="FieldChangeLogger.html#clear">clear</a></li><li data-type='method'><a href="FieldChangeLogger.html#format">format</a></li></ul></li><li><a href="module-BatchTaskRunner-BatchTaskRunner.html">BatchTaskRunner</a><ul class='methods'><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_checkTaskProvider">_checkTaskProvider</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_doBatchTask">_doBatchTask</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_getTask">_getTask</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#start">start</a></li></ul></li><li><a href="module-Subform-Subform.html">Subform</a><ul class='methods'><li data-type='method'><a href="module-Subform-Subform.html#getDatas">getDatas</a></li><li data-type='method'><a href="module-Subform-Subform.html#getFormGroupId">getFormGroupId</a></li><li data-type='method'><a href="module-Subform-Subform.html#getFormGroupIds">getFormGroupIds</a></li><li data-type='method'><a href="module-Subform-Subform.html#getIndex">getIndex</a></li><li data-type='method'><a href="module-Subform-Subform.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-Subform-Subform.html#getItem">getItem</a></li><li data-type='method'><a href="module-Subform-Subform.html#setDatas">setDatas</a></li><li data-type='method'><a href="module-Subform-Subform.html#summary">summary</a></li><li data-type='method'><a href="module-Subform-Subform.html#updateItem">updateItem</a></li></ul></li></ul>
-    
-</nav>
-
-<div id="main">
-    
-    <h1 class="page-title">UI</h1>
-    
-
-    
-
-
-
-
-<section>
-
-<header>
-    
-</header>
-
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>UI工具方法</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-            
-                <div class="description usertext">UI工具方法</div>
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id=".dialog"><span class="type-signature type-signature-static">(static) </span>dialog<span class="signature">(context, type, title, content)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>弹出对话框</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>export function didMount() {
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="navicon-button x">
+      <div class="navicon"></div>
+    </label>
+
+    <label for="nav-trigger" class="overlay"></label>
+
+    <nav>
+      <input type="text" id="nav-search" placeholder="Search" />
+
+      <h2><a href="index.html">Home</a></h2>
+      <h2>
+        <a href="https://github.com/hackingzhang/aliwork-helper" target="_blank" class="menu-item"
+          >Github</a
+        >
+      </h2>
+      <h2>
+        <a href="https://gitee.com/hexzhangshuai/aliwork-helper" target="_blank" class="menu-item"
+          >Gitee码云</a
+        >
+      </h2>
+      <h2>
+        <a
+          href="https://docs.aliwork.com/docs/developer/api/about"
+          target="_blank"
+          class="menu-item"
+          >宜搭开放API</a
+        >
+      </h2>
+      <h3>Modules</h3>
+      <ul>
+        <li><a href="module-BatchTaskRunner.html">BatchTaskRunner</a></li>
+        <li>
+          <a href="module-DataLinkage.html">DataLinkage</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-DataLinkage.html#.dataLinkage">dataLinkage</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataLinkage.html#.dataLinkageSubform">dataLinkageSubform</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataLinkage.html#~resolveConditionMap">resolveConditionMap</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-DataSource.html">DataSource</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-DataSource.html#.deleteFormData">deleteFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.executeTask">executeTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.fetchSubformDatas">fetchSubformDatas</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.fetchSubformDatasAll">fetchSubformDatasAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.getFormData">getFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.getOperationRecords">getOperationRecords</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.invokeConnector">invokeConnector</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.saveFormData">saveFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDataIds">searchFormDataIds</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDataIdsAll">searchFormDataIdsAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDatas">searchFormDatas</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDatasAll">searchFormDatasAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.startInstance">startInstance</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.updateFormData">updateFormData</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Field.html">Field</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Field.html#.activateTabItems">activateTabItems</a>
+            </li>
+            <li data-type="method"><a href="module-Field.html#.fieldToString">fieldToString</a></li>
+            <li data-type="method">
+              <a href="module-Field.html#.fieldValueDiff">fieldValueDiff</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.fieldValueEqualSingle">fieldValueEqualSingle</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateAssociationFormFieldData"
+                >generateAssociationFormFieldData</a
+              >
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateDptFieldData">generateDptFieldData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateEmployeeFieldData">generateEmployeeFieldData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.getFieldDataTypeById">getFieldDataTypeById</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.getFieldTypeById">getFieldTypeById</a>
+            </li>
+            <li data-type="method"><a href="module-Field.html#.mergeTo">mergeTo</a></li>
+            <li data-type="method"><a href="module-Field.html#.syncTo">syncTo</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Subform.html">Subform</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Subform.html#.associateForm2Subform">associateForm2Subform</a>
+            </li>
+            <li data-type="method"><a href="module-Subform.html#.sum2Main">sum2Main</a></li>
+            <li data-type="method">
+              <a href="module-Subform.html#~resolveFieldMaps">resolveFieldMaps</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-UI.html">UI</a>
+          <ul class="methods">
+            <li data-type="method"><a href="module-UI.html#.dialog">dialog</a></li>
+            <li data-type="method"><a href="module-UI.html#.hijackSubmit">hijackSubmit</a></li>
+            <li data-type="method"><a href="module-UI.html#.loading">loading</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Utils.html">Utils</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Utils.html#.dateTimeFormat">dateTimeFormat</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Utils.html#.generateRandomId">generateRandomId</a>
+            </li>
+            <li data-type="method"><a href="module-Utils.html#.isEmpty">isEmpty</a></li>
+            <li data-type="method"><a href="module-Utils.html#.retry">retry</a></li>
+            <li data-type="method"><a href="module-Utils.html#.round">round</a></li>
+            <li data-type="method"><a href="module-Utils.html#.sleep">sleep</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Classes</h3>
+      <ul>
+        <li>
+          <a href="FieldChangeLogger.html">FieldChangeLogger</a>
+          <ul class="methods">
+            <li data-type="method"><a href="FieldChangeLogger.html#change">change</a></li>
+            <li data-type="method"><a href="FieldChangeLogger.html#clear">clear</a></li>
+            <li data-type="method"><a href="FieldChangeLogger.html#format">format</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-BatchTaskRunner-BatchTaskRunner.html">BatchTaskRunner</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_checkTaskProvider"
+                >_checkTaskProvider</a
+              >
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_doBatchTask">_doBatchTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_getTask">_getTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#start">start</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Subform-Subform.html">Subform</a>
+          <ul class="methods">
+            <li data-type="method"><a href="module-Subform-Subform.html#getDatas">getDatas</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getFormGroupId">getFormGroupId</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getFormGroupIds">getFormGroupIds</a>
+            </li>
+            <li data-type="method"><a href="module-Subform-Subform.html#getIndex">getIndex</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getInstance">getInstance</a>
+            </li>
+            <li data-type="method"><a href="module-Subform-Subform.html#getItem">getItem</a></li>
+            <li data-type="method"><a href="module-Subform-Subform.html#setDatas">setDatas</a></li>
+            <li data-type="method"><a href="module-Subform-Subform.html#summary">summary</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#updateItem">updateItem</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="main">
+      <h1 class="page-title">UI</h1>
+
+      <section>
+        <header></header>
+
+        <article>
+          <div class="container-overview">
+            <dl class="details">
+              <dt class="tag-description">Description:</dt>
+              <dd class="tag-description">
+                <ul class="dummy">
+                  <li>UI工具方法</li>
+                </ul>
+              </dd>
+
+              <dt class="tag-source">Source:</dt>
+              <dd class="tag-source">
+                <ul class="dummy">
+                  <li><a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line1">line 1</a></li>
+                </ul>
+              </dd>
+            </dl>
+
+            <div class="description usertext">UI工具方法</div>
+          </div>
+
+          <h3 class="subsection-title">Methods</h3>
+
+          <h4 class="name" id=".dialog">
+            <span class="type-signature type-signature-static">(static) </span>dialog<span
+              class="signature"
+              >(context, type, title, content)</span
+            ><span class="type-signature"> &rarr; {Promise}</span>
+          </h4>
+
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>弹出对话框</li>
+              </ul>
+            </dd>
+
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li><a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line27">line 27</a></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5 class="h5-examples">Example</h5>
+
+          <pre class="prettyprint"><code>export function didMount() {
   dialog(this, "confirm", "操作确认", "确认删除此项数据？").then(() => {
     console.log("点击确认");
   }).catch(() => {
@@ -215,252 +303,113 @@
   dialog(this, "alert", "警告", &lt;p color={{ color: "red" }}>数据将被清除，此操作不可撤销&lt;/p>)
 }</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>context</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
+                <td class="type">
+                  <span class="param-type">Object</span>
+                </td>
 
+                <td class="description last">this上下文</td>
+              </tr>
 
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">this上下文</td>
-        </tr>
-
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>type</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">"alert"</span>
-|
+                <td class="type">
+                  <span class="param-type">"alert"</span>
+                  |
 
-<span class="param-type">"confirm"</span>
-|
+                  <span class="param-type">"confirm"</span>
+                  |
 
-<span class="param-type">"show"</span>
+                  <span class="param-type">"show"</span>
+                </td>
 
+                <td class="description last">对话框类型，可选'alert', 'confirm', 'show'</td>
+              </tr>
 
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">对话框类型，可选'alert', 'confirm', 'show'</td>
-        </tr>
-
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>title</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
 
+                <td class="description last">对话框标题</td>
+              </tr>
 
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">对话框标题</td>
-        </tr>
-
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>content</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">jsx</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">对话框内容，支持传入jsx</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5 class="h5-returns">Returns:</h5>
-
-        
-<div class="param-desc">
-    点击确认则Promise被resolve，点击取消被reject
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".hijackSubmit"><span class="type-signature type-signature-static">(static) </span>hijackSubmit<span class="signature">(context)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>劫持提交按钮，会在表单提交按钮上方放置一个遮罩，当点击时会调用宜搭JS中export的名为
-beforeBeforeSubmit的方法。方法执行完成后会模拟点击提交按钮进行正式提交。
-<br/>
-⚠️慎用，一旦宜搭UI变更此方法可能会失效</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line89">line 89</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>export function didMount() {
+                <td class="type">
+                  <span class="param-type">string</span>
+                  |
+
+                  <span class="param-type">jsx</span>
+                </td>
+
+                <td class="description last">对话框内容，支持传入jsx</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h5 class="h5-returns">Returns:</h5>
+
+          <div class="param-desc">点击确认则Promise被resolve，点击取消被reject</div>
+
+          <dl class="param-type">
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">Promise</span>
+            </dd>
+          </dl>
+
+          <h4 class="name" id=".hijackSubmit">
+            <span class="type-signature type-signature-static">(static) </span>hijackSubmit<span
+              class="signature"
+              >(context)</span
+            ><span class="type-signature"></span>
+          </h4>
+
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>
+                  劫持提交按钮，会在表单提交按钮上方放置一个遮罩，当点击时会调用宜搭JS中export的名为
+                  beforeBeforeSubmit的方法。方法执行完成后会模拟点击提交按钮进行正式提交。
+                  <br />
+                  ⚠️慎用，一旦宜搭UI变更此方法可能会失效
+                </li>
+              </ul>
+            </dd>
+
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li><a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line89">line 89</a></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5 class="h5-examples">Example</h5>
+
+          <pre class="prettyprint"><code>export function didMount() {
   hijackSubmit(this);
 }
 
@@ -469,145 +418,58 @@ export function beforeBeforeSubmit() {
   console.log("before before submit");
 }</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>context</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
+                <td class="type">
+                  <span class="param-type">Object</span>
+                </td>
 
+                <td class="description last">this上下文</td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h4 class="name" id=".loading">
+            <span class="type-signature type-signature-static">(static) </span>loading<span
+              class="signature"
+              >(context, title, size, hasMask)</span
+            ><span class="type-signature"> &rarr; {function}</span>
+          </h4>
 
-            
-            </td>
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>显示加载动画</li>
+              </ul>
+            </dd>
 
-            
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li><a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line62">line 62</a></li>
+              </ul>
+            </dd>
+          </dl>
 
-            
+          <h5 class="h5-examples">Example</h5>
 
-            <td class="description last">this上下文</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".loading"><span class="type-signature type-signature-static">(static) </span>loading<span class="signature">(context, title, size, hasMask)</span><span class="type-signature"> &rarr; {function}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>显示加载动画</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ui.js.html">ui.js</a>, <a href="ui.js.html#line62">line 62</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>export async function onFieldChange({ value }) {
+          <pre class="prettyprint"><code>export async function onFieldChange({ value }) {
   const closeLoading = loading(this, "", "large", true);
   // 处理耗时任务
   await doSomething(value);
@@ -615,221 +477,104 @@ export function beforeBeforeSubmit() {
   closeLoading();
 }</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th>Default</th>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-        <th>Type</th>
-
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>context</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
+                <td class="type">
+                  <span class="param-type">Object</span>
                 </td>
-            
 
-            <td class="description last">this上下文</td>
-        </tr>
+                <td class="default"></td>
 
-    
+                <td class="description last">this上下文</td>
+              </tr>
 
-        <tr>
-            
+              <tr>
                 <td class="name"><code>title</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
+                <td class="type">
+                  <span class="param-type">string</span>
                 </td>
-            
 
-            <td class="description last">提示文本</td>
-        </tr>
+                <td class="default"></td>
 
-    
+                <td class="description last">提示文本</td>
+              </tr>
 
-        <tr>
-            
+              <tr>
                 <td class="name"><code>size</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
+                <td class="type">
+                  <span class="param-type">string</span>
                 </td>
-            
 
-            <td class="description last">toast尺寸，可选'medium', 'large'</td>
-        </tr>
+                <td class="default"></td>
 
-    
+                <td class="description last">toast尺寸，可选'medium', 'large'</td>
+              </tr>
 
-        <tr>
-            
+              <tr>
                 <td class="name"><code>hasMask</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>false</code>
-                
+                <td class="type">
+                  <span class="param-type">boolean</span>
                 </td>
-            
 
-            <td class="description last">是否显示遮罩层，一个遮盖整个页面的半透明黑色背景，可防止用户进行其他操作</td>
-        </tr>
+                <td class="default">
+                  <code>false</code>
+                </td>
 
-    
-    </tbody>
-</table>
+                <td class="description last">
+                  是否显示遮罩层，一个遮盖整个页面的半透明黑色背景，可防止用户进行其他操作
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h5 class="h5-returns">Returns:</h5>
 
+          <div class="param-desc">一个函数，调用可关闭加载动画</div>
 
+          <dl class="param-type">
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">function</span>
+            </dd>
+          </dl>
+        </article>
+      </section>
+    </div>
 
+    <br class="clear" />
 
+    <footer>
+      Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Wed
+      Jun 19 2024 12:08:14 GMT+0800 (中国标准时间) using the
+      <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    </footer>
 
+    <script>
+      prettyPrint();
+    </script>
+    <script src="scripts/polyfill.js"></script>
+    <script src="scripts/linenumber.js"></script>
 
-
-
-
-
-
-
-
-
-
-<h5 class="h5-returns">Returns:</h5>
-
-        
-<div class="param-desc">
-    一个函数，调用可关闭加载动画
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">function</span>
-
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-    
-    
-</div>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Wed Jun 19 2024 12:08:14 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
-</footer>
-
-<script>prettyPrint();</script>
-<script src="scripts/polyfill.js"></script>
-<script src="scripts/linenumber.js"></script>
-
-<script src="scripts/search.js" defer></script>
-
-
-
-</body>
+    <script src="scripts/search.js" defer></script>
+  </body>
 </html>

@@ -1,549 +1,449 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Utils - Aliwork helper</title>
-    
+
     <meta name="description" content="宜搭前端 JS 工具代码库" />
-    
-        <meta name="keywords" content="Aliwork 宜搭 工具库" />
-        <meta name="keyword" content="Aliwork 宜搭 工具库" />
-    
-    
-    
+
+    <meta name="keywords" content="Aliwork 宜搭 工具库" />
+    <meta name="keyword" content="Aliwork 宜搭 工具库" />
+
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css" />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css" />
     <script src="scripts/nav.js" defer></script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
-
-<label for="nav-trigger" class="overlay"></label>
-
-<nav >
-    
-    <input type="text" id="nav-search" placeholder="Search" />
-    
-    
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/hackingzhang/aliwork-helper" target="_blank" class="menu-item" >Github</a></h2><h2><a href="https://gitee.com/hexzhangshuai/aliwork-helper" target="_blank" class="menu-item" >Gitee码云</a></h2><h2><a href="https://docs.aliwork.com/docs/developer/api/about" target="_blank" class="menu-item" >宜搭开放API</a></h2><h3>Modules</h3><ul><li><a href="module-BatchTaskRunner.html">BatchTaskRunner</a></li><li><a href="module-DataLinkage.html">DataLinkage</a><ul class='methods'><li data-type='method'><a href="module-DataLinkage.html#.dataLinkage">dataLinkage</a></li><li data-type='method'><a href="module-DataLinkage.html#.dataLinkageSubform">dataLinkageSubform</a></li><li data-type='method'><a href="module-DataLinkage.html#~resolveConditionMap">resolveConditionMap</a></li></ul></li><li><a href="module-DataSource.html">DataSource</a><ul class='methods'><li data-type='method'><a href="module-DataSource.html#.deleteFormData">deleteFormData</a></li><li data-type='method'><a href="module-DataSource.html#.executeTask">executeTask</a></li><li data-type='method'><a href="module-DataSource.html#.fetchSubformDatas">fetchSubformDatas</a></li><li data-type='method'><a href="module-DataSource.html#.fetchSubformDatasAll">fetchSubformDatasAll</a></li><li data-type='method'><a href="module-DataSource.html#.getFormData">getFormData</a></li><li data-type='method'><a href="module-DataSource.html#.getOperationRecords">getOperationRecords</a></li><li data-type='method'><a href="module-DataSource.html#.invokeConnector">invokeConnector</a></li><li data-type='method'><a href="module-DataSource.html#.saveFormData">saveFormData</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDataIds">searchFormDataIds</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDataIdsAll">searchFormDataIdsAll</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDatas">searchFormDatas</a></li><li data-type='method'><a href="module-DataSource.html#.searchFormDatasAll">searchFormDatasAll</a></li><li data-type='method'><a href="module-DataSource.html#.startInstance">startInstance</a></li><li data-type='method'><a href="module-DataSource.html#.updateFormData">updateFormData</a></li></ul></li><li><a href="module-Field.html">Field</a><ul class='methods'><li data-type='method'><a href="module-Field.html#.activateTabItems">activateTabItems</a></li><li data-type='method'><a href="module-Field.html#.fieldToString">fieldToString</a></li><li data-type='method'><a href="module-Field.html#.fieldValueDiff">fieldValueDiff</a></li><li data-type='method'><a href="module-Field.html#.fieldValueEqualSingle">fieldValueEqualSingle</a></li><li data-type='method'><a href="module-Field.html#.generateAssociationFormFieldData">generateAssociationFormFieldData</a></li><li data-type='method'><a href="module-Field.html#.generateDptFieldData">generateDptFieldData</a></li><li data-type='method'><a href="module-Field.html#.generateEmployeeFieldData">generateEmployeeFieldData</a></li><li data-type='method'><a href="module-Field.html#.getFieldDataTypeById">getFieldDataTypeById</a></li><li data-type='method'><a href="module-Field.html#.getFieldTypeById">getFieldTypeById</a></li><li data-type='method'><a href="module-Field.html#.mergeTo">mergeTo</a></li><li data-type='method'><a href="module-Field.html#.syncTo">syncTo</a></li></ul></li><li><a href="module-Subform.html">Subform</a><ul class='methods'><li data-type='method'><a href="module-Subform.html#.associateForm2Subform">associateForm2Subform</a></li><li data-type='method'><a href="module-Subform.html#.sum2Main">sum2Main</a></li><li data-type='method'><a href="module-Subform.html#~resolveFieldMaps">resolveFieldMaps</a></li></ul></li><li><a href="module-UI.html">UI</a><ul class='methods'><li data-type='method'><a href="module-UI.html#.dialog">dialog</a></li><li data-type='method'><a href="module-UI.html#.hijackSubmit">hijackSubmit</a></li><li data-type='method'><a href="module-UI.html#.loading">loading</a></li></ul></li><li><a href="module-Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="module-Utils.html#.dateTimeFormat">dateTimeFormat</a></li><li data-type='method'><a href="module-Utils.html#.generateRandomId">generateRandomId</a></li><li data-type='method'><a href="module-Utils.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="module-Utils.html#.retry">retry</a></li><li data-type='method'><a href="module-Utils.html#.round">round</a></li><li data-type='method'><a href="module-Utils.html#.sleep">sleep</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="FieldChangeLogger.html">FieldChangeLogger</a><ul class='methods'><li data-type='method'><a href="FieldChangeLogger.html#change">change</a></li><li data-type='method'><a href="FieldChangeLogger.html#clear">clear</a></li><li data-type='method'><a href="FieldChangeLogger.html#format">format</a></li></ul></li><li><a href="module-BatchTaskRunner-BatchTaskRunner.html">BatchTaskRunner</a><ul class='methods'><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_checkTaskProvider">_checkTaskProvider</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_doBatchTask">_doBatchTask</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#_getTask">_getTask</a></li><li data-type='method'><a href="module-BatchTaskRunner-BatchTaskRunner.html#start">start</a></li></ul></li><li><a href="module-Subform-Subform.html">Subform</a><ul class='methods'><li data-type='method'><a href="module-Subform-Subform.html#getDatas">getDatas</a></li><li data-type='method'><a href="module-Subform-Subform.html#getFormGroupId">getFormGroupId</a></li><li data-type='method'><a href="module-Subform-Subform.html#getFormGroupIds">getFormGroupIds</a></li><li data-type='method'><a href="module-Subform-Subform.html#getIndex">getIndex</a></li><li data-type='method'><a href="module-Subform-Subform.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-Subform-Subform.html#getItem">getItem</a></li><li data-type='method'><a href="module-Subform-Subform.html#setDatas">setDatas</a></li><li data-type='method'><a href="module-Subform-Subform.html#summary">summary</a></li><li data-type='method'><a href="module-Subform-Subform.html#updateItem">updateItem</a></li></ul></li></ul>
-    
-</nav>
-
-<div id="main">
-    
-    <h1 class="page-title">Utils</h1>
-    
-
-    
-
-
-
-
-<section>
-
-<header>
-    
-</header>
-
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>一些辅助工具方法</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-            
-                <div class="description usertext">一些辅助工具方法</div>
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id=".dateTimeFormat"><span class="type-signature type-signature-static">(static) </span>dateTimeFormat<span class="signature">(dateTime, format)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>日期格式化</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line129">line 129</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>dateTimeFormat(new Date(1704067200000), "YYYY年MM月DD日"); // 2024年01月01日
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="navicon-button x">
+      <div class="navicon"></div>
+    </label>
+
+    <label for="nav-trigger" class="overlay"></label>
+
+    <nav>
+      <input type="text" id="nav-search" placeholder="Search" />
+
+      <h2><a href="index.html">Home</a></h2>
+      <h2>
+        <a href="https://github.com/hackingzhang/aliwork-helper" target="_blank" class="menu-item"
+          >Github</a
+        >
+      </h2>
+      <h2>
+        <a href="https://gitee.com/hexzhangshuai/aliwork-helper" target="_blank" class="menu-item"
+          >Gitee码云</a
+        >
+      </h2>
+      <h2>
+        <a
+          href="https://docs.aliwork.com/docs/developer/api/about"
+          target="_blank"
+          class="menu-item"
+          >宜搭开放API</a
+        >
+      </h2>
+      <h3>Modules</h3>
+      <ul>
+        <li><a href="module-BatchTaskRunner.html">BatchTaskRunner</a></li>
+        <li>
+          <a href="module-DataLinkage.html">DataLinkage</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-DataLinkage.html#.dataLinkage">dataLinkage</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataLinkage.html#.dataLinkageSubform">dataLinkageSubform</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataLinkage.html#~resolveConditionMap">resolveConditionMap</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-DataSource.html">DataSource</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-DataSource.html#.deleteFormData">deleteFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.executeTask">executeTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.fetchSubformDatas">fetchSubformDatas</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.fetchSubformDatasAll">fetchSubformDatasAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.getFormData">getFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.getOperationRecords">getOperationRecords</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.invokeConnector">invokeConnector</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.saveFormData">saveFormData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDataIds">searchFormDataIds</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDataIdsAll">searchFormDataIdsAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDatas">searchFormDatas</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.searchFormDatasAll">searchFormDatasAll</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.startInstance">startInstance</a>
+            </li>
+            <li data-type="method">
+              <a href="module-DataSource.html#.updateFormData">updateFormData</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Field.html">Field</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Field.html#.activateTabItems">activateTabItems</a>
+            </li>
+            <li data-type="method"><a href="module-Field.html#.fieldToString">fieldToString</a></li>
+            <li data-type="method">
+              <a href="module-Field.html#.fieldValueDiff">fieldValueDiff</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.fieldValueEqualSingle">fieldValueEqualSingle</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateAssociationFormFieldData"
+                >generateAssociationFormFieldData</a
+              >
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateDptFieldData">generateDptFieldData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.generateEmployeeFieldData">generateEmployeeFieldData</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.getFieldDataTypeById">getFieldDataTypeById</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Field.html#.getFieldTypeById">getFieldTypeById</a>
+            </li>
+            <li data-type="method"><a href="module-Field.html#.mergeTo">mergeTo</a></li>
+            <li data-type="method"><a href="module-Field.html#.syncTo">syncTo</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Subform.html">Subform</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Subform.html#.associateForm2Subform">associateForm2Subform</a>
+            </li>
+            <li data-type="method"><a href="module-Subform.html#.sum2Main">sum2Main</a></li>
+            <li data-type="method">
+              <a href="module-Subform.html#~resolveFieldMaps">resolveFieldMaps</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-UI.html">UI</a>
+          <ul class="methods">
+            <li data-type="method"><a href="module-UI.html#.dialog">dialog</a></li>
+            <li data-type="method"><a href="module-UI.html#.hijackSubmit">hijackSubmit</a></li>
+            <li data-type="method"><a href="module-UI.html#.loading">loading</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Utils.html">Utils</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-Utils.html#.dateTimeFormat">dateTimeFormat</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Utils.html#.generateRandomId">generateRandomId</a>
+            </li>
+            <li data-type="method"><a href="module-Utils.html#.isEmpty">isEmpty</a></li>
+            <li data-type="method"><a href="module-Utils.html#.retry">retry</a></li>
+            <li data-type="method"><a href="module-Utils.html#.round">round</a></li>
+            <li data-type="method"><a href="module-Utils.html#.sleep">sleep</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Classes</h3>
+      <ul>
+        <li>
+          <a href="FieldChangeLogger.html">FieldChangeLogger</a>
+          <ul class="methods">
+            <li data-type="method"><a href="FieldChangeLogger.html#change">change</a></li>
+            <li data-type="method"><a href="FieldChangeLogger.html#clear">clear</a></li>
+            <li data-type="method"><a href="FieldChangeLogger.html#format">format</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-BatchTaskRunner-BatchTaskRunner.html">BatchTaskRunner</a>
+          <ul class="methods">
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_checkTaskProvider"
+                >_checkTaskProvider</a
+              >
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_doBatchTask">_doBatchTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#_getTask">_getTask</a>
+            </li>
+            <li data-type="method">
+              <a href="module-BatchTaskRunner-BatchTaskRunner.html#start">start</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="module-Subform-Subform.html">Subform</a>
+          <ul class="methods">
+            <li data-type="method"><a href="module-Subform-Subform.html#getDatas">getDatas</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getFormGroupId">getFormGroupId</a>
+            </li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getFormGroupIds">getFormGroupIds</a>
+            </li>
+            <li data-type="method"><a href="module-Subform-Subform.html#getIndex">getIndex</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#getInstance">getInstance</a>
+            </li>
+            <li data-type="method"><a href="module-Subform-Subform.html#getItem">getItem</a></li>
+            <li data-type="method"><a href="module-Subform-Subform.html#setDatas">setDatas</a></li>
+            <li data-type="method"><a href="module-Subform-Subform.html#summary">summary</a></li>
+            <li data-type="method">
+              <a href="module-Subform-Subform.html#updateItem">updateItem</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="main">
+      <h1 class="page-title">Utils</h1>
+
+      <section>
+        <header></header>
+
+        <article>
+          <div class="container-overview">
+            <dl class="details">
+              <dt class="tag-description">Description:</dt>
+              <dd class="tag-description">
+                <ul class="dummy">
+                  <li>一些辅助工具方法</li>
+                </ul>
+              </dd>
+
+              <dt class="tag-source">Source:</dt>
+              <dd class="tag-source">
+                <ul class="dummy">
+                  <li>
+                    <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line1">line 1</a>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+
+            <div class="description usertext">一些辅助工具方法</div>
+          </div>
+
+          <h3 class="subsection-title">Methods</h3>
+
+          <h4 class="name" id=".dateTimeFormat">
+            <span class="type-signature type-signature-static">(static) </span>dateTimeFormat<span
+              class="signature"
+              >(dateTime, format)</span
+            ><span class="type-signature"></span>
+          </h4>
+
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>日期格式化</li>
+              </ul>
+            </dd>
+
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line129">line 129</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5 class="h5-examples">Example</h5>
+
+          <pre
+            class="prettyprint"
+          ><code>dateTimeFormat(new Date(1704067200000), "YYYY年MM月DD日"); // 2024年01月01日
 dateTimeFormat(new Date(1704067200000), "HH时mm分ss秒sss"); // 08时00分00秒000
 dateTimeFormat(new Date(1704067200000), "YYYY年MM月DD日 HH时mm分ss秒sss"); // 2024年01月01日 08时00分00秒000</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>dateTime</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Date</span>
+                <td class="type">
+                  <span class="param-type">Date</span>
+                </td>
 
+                <td class="description last">Date对象</td>
+              </tr>
 
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Date对象</td>
-        </tr>
-
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>format</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
 
+                <td class="description last">
+                  格式化字符串，遵循ISO8601标准(YYYYY-MM-DDTHH:mm:ss.sssZ)
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h4 class="name" id=".generateRandomId">
+            <span class="type-signature type-signature-static">(static) </span>generateRandomId<span
+              class="signature"
+              >(length)</span
+            ><span class="type-signature"> &rarr; {string}</span>
+          </h4>
 
-            
-            </td>
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>生成一个（伪）随机ID</li>
+              </ul>
+            </dd>
 
-            
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line176">line 176</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
 
-            
+          <h5 class="h5-examples">Example</h5>
 
-            <td class="description last">格式化字符串，遵循ISO8601标准(YYYYY-MM-DDTHH:mm:ss.sssZ)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".generateRandomId"><span class="type-signature type-signature-static">(static) </span>generateRandomId<span class="signature">(length)</span><span class="type-signature"> &rarr; {string}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>生成一个（伪）随机ID</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line176">line 176</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>const id = generateRandomId(); // 生成一个32个字符的ID
+          <pre class="prettyprint"><code>const id = generateRandomId(); // 生成一个32个字符的ID
 const id = generateRandomId(16); // 生成一个16个字符的ID</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th>Default</th>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-        <th>Type</th>
-
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>length</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>32</code>
-                
+                <td class="type">
+                  <span class="param-type">number</span>
                 </td>
-            
 
-            <td class="description last">ID长度</td>
-        </tr>
+                <td class="default">
+                  <code>32</code>
+                </td>
 
-    
-    </tbody>
-</table>
+                <td class="description last">ID长度</td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h5 class="h5-returns">Returns:</h5>
 
+          <div class="param-desc">生成的ID</div>
 
+          <dl class="param-type">
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">string</span>
+            </dd>
+          </dl>
 
+          <h4 class="name" id=".isEmpty">
+            <span class="type-signature type-signature-static">(static) </span>isEmpty<span
+              class="signature"
+              >(value)</span
+            ><span class="type-signature"> &rarr; {boolean}</span>
+          </h4>
 
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>
+                  判断一个值是否为空 <br />
+                  这些情况会被判定为空：空字符串、null、undefined、NaN、空数组、空对象、空Map、空Set
+                </li>
+              </ul>
+            </dd>
 
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line95">line 95</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
 
+          <h5 class="h5-examples">Example</h5>
 
-
-
-
-
-
-
-
-
-<h5 class="h5-returns">Returns:</h5>
-
-        
-<div class="param-desc">
-    生成的ID
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".isEmpty"><span class="type-signature type-signature-static">(static) </span>isEmpty<span class="signature">(value)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>判断一个值是否为空 <br/>
-这些情况会被判定为空：空字符串、null、undefined、NaN、空数组、空对象、空Map、空Set</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line95">line 95</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>isEmpty(""); // true
+          <pre class="prettyprint"><code>isEmpty(""); // true
 isEmpty([]); // true
 isEmpty(undefined); // true
 isEmpty(null); // true
@@ -556,168 +456,70 @@ isEmpty(0); // false
 isEmpty({a: 1}); // false
 isEmpty(new Map().set("a", "1")); // false</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>value</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">any</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">任意值</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5 class="h5-returns">Returns:</h5>
-
-        
-<div class="param-desc">
-    - 值是否为空
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".retry"><span class="type-signature type-signature-async, static">(async, static) </span>retry<span class="signature">(callable, retryTimes, retryDelay, &hellip;args)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>函数失败重试 <br/></li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line49">line 49</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>async function updateFormData(formData) {
+                <td class="type">
+                  <span class="param-type">any</span>
+                </td>
+
+                <td class="description last">任意值</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h5 class="h5-returns">Returns:</h5>
+
+          <div class="param-desc">- 值是否为空</div>
+
+          <dl class="param-type">
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">boolean</span>
+            </dd>
+          </dl>
+
+          <h4 class="name" id=".retry">
+            <span class="type-signature type-signature-async, static">(async, static) </span
+            >retry<span class="signature">(callable, retryTimes, retryDelay, &hellip;args)</span
+            ><span class="type-signature"></span>
+          </h4>
+
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>函数失败重试 <br /></li>
+              </ul>
+            </dd>
+
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line49">line 49</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5 class="h5-examples">Example</h5>
+
+          <pre class="prettyprint"><code>async function updateFormData(formData) {
   const resp = await doUpdate(formData);
   if (resp.error) {
     throw Error(resp.error);
@@ -729,480 +531,206 @@ export async function onClick() {
   retrey(() => updateFormData(), 5, 500, { field_123: "value" })
 }</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th>Attributes</th>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+                <th>Default</th>
 
-        <th>Type</th>
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>callable</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
+                <td class="type">
+                  <span class="param-type">function</span>
                 </td>
-            
 
-            
-                <td class="default">
-                
+                <td class="attributes"></td>
+
+                <td class="default"></td>
+
+                <td class="description last">
+                  要执行的函数。如果函数抛出异常则进行重试，
+                  支持函数返回Promise，如果返回的Promise被reject则进行重试
                 </td>
-            
+              </tr>
 
-            <td class="description last">要执行的函数。如果函数抛出异常则进行重试，
-支持函数返回Promise，如果返回的Promise被reject则进行重试</td>
-        </tr>
-
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>retryTimes</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
+                <td class="type">
+                  <span class="param-type">number</span>
                 </td>
-            
 
-            
+                <td class="attributes"></td>
+
                 <td class="default">
-                
-                    <code>3</code>
-                
+                  <code>3</code>
                 </td>
-            
 
-            <td class="description last">重试次数</td>
-        </tr>
+                <td class="description last">重试次数</td>
+              </tr>
 
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>retryDelay</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
+                <td class="type">
+                  <span class="param-type">number</span>
                 </td>
-            
 
-            
+                <td class="attributes"></td>
+
                 <td class="default">
-                
-                    <code>300</code>
-                
+                  <code>300</code>
                 </td>
-            
 
-            <td class="description last">重试延时，单位毫秒，默认300ms</td>
-        </tr>
+                <td class="description last">重试延时，单位毫秒，默认300ms</td>
+              </tr>
 
-    
-
-        <tr>
-            
+              <tr>
                 <td class="name"><code>args</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
+                <td class="type">
+                  <span class="param-type">*</span>
                 </td>
-            
 
-            
-                <td class="default">
-                
-                </td>
-            
+                <td class="attributes">&lt;repeatable><br /></td>
 
-            <td class="description last">传递给callable的参数</td>
-        </tr>
+                <td class="default"></td>
 
-    
-    </tbody>
-</table>
+                <td class="description last">传递给callable的参数</td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h4 class="name" id=".round">
+            <span class="type-signature type-signature-static">(static) </span>round<span
+              class="signature"
+              >(number, digits)</span
+            ><span class="type-signature"> &rarr; {number}</span>
+          </h4>
 
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>四舍五入</li>
+              </ul>
+            </dd>
 
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line201">line 201</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
 
+          <h5 class="h5-examples">Example</h5>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".round"><span class="type-signature type-signature-static">(static) </span>round<span class="signature">(number, digits)</span><span class="type-signature"> &rarr; {number}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>四舍五入</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line201">line 201</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>0.1 + 0.2; // 0.30000000000000004
+          <pre class="prettyprint"><code>0.1 + 0.2; // 0.30000000000000004
 round(0.1 + 0.2); // 0.3
 
 0.123 * 3.4; // 0.41819999999999996
 round(0.123 * 3.4); // 0.42
 round(0.123 * 3.4, 3); // 0.418</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th>Default</th>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-        <th>Type</th>
-
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>number</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
+                <td class="type">
+                  <span class="param-type">number</span>
                 </td>
-            
 
-            <td class="description last">数字</td>
-        </tr>
+                <td class="default"></td>
 
-    
+                <td class="description last">数字</td>
+              </tr>
 
-        <tr>
-            
+              <tr>
                 <td class="name"><code>digits</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>2</code>
-                
+                <td class="type">
+                  <span class="param-type">number</span>
                 </td>
-            
 
-            <td class="description last">要保留的小数位数</td>
-        </tr>
+                <td class="default">
+                  <code>2</code>
+                </td>
 
-    
-    </tbody>
-</table>
+                <td class="description last">要保留的小数位数</td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h5 class="h5-returns">Returns:</h5>
 
+          <div class="param-desc">四舍五入后的数字</div>
 
+          <dl class="param-type">
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">number</span>
+            </dd>
+          </dl>
 
+          <h4 class="name" id=".sleep">
+            <span class="type-signature type-signature-static">(static) </span>sleep<span
+              class="signature"
+              >(time)</span
+            ><span class="type-signature"> &rarr; {Promise}</span>
+          </h4>
 
+          <dl class="details">
+            <dt class="tag-description">Description:</dt>
+            <dd class="tag-description">
+              <ul class="dummy">
+                <li>sleep函数，可在异步场景中实现延时或者暂停执行</li>
+              </ul>
+            </dd>
 
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line21">line 21</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
 
+          <h5 class="h5-examples">Example</h5>
 
-
-
-
-
-
-
-
-
-<h5 class="h5-returns">Returns:</h5>
-
-        
-<div class="param-desc">
-    四舍五入后的数字
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number</span>
-
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".sleep"><span class="type-signature type-signature-static">(static) </span>sleep<span class="signature">(time)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>sleep函数，可在异步场景中实现延时或者暂停执行</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line21">line 21</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-examples">Example</h5>
-    
-    <pre class="prettyprint"><code>async function batchUpdate(datas) {
+          <pre class="prettyprint"><code>async function batchUpdate(datas) {
   // 批量调用接口更新数据，每次更新之间等待1秒钟以防止频繁请求导致接口被限制
   for (const data of datas) {
     await doUpdate(data);
@@ -1210,129 +738,60 @@ round(0.123 * 3.4, 3); // 0.418</code></pre>
   }
 }</code></pre>
 
+          <h5 class="h5-parameters">Parameters:</h5>
 
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
+                <th>Type</th>
 
-    <h5 class="h5-parameters">Parameters:</h5>
-    
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
+            <tbody>
+              <tr>
                 <td class="name"><code>time</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
+                <td class="type">
+                  <span class="param-type">number</span>
+                </td>
 
+                <td class="description last">sleep时间，单位毫秒</td>
+              </tr>
+            </tbody>
+          </table>
 
+          <h5 class="h5-returns">Returns:</h5>
 
-            
-            </td>
+          <div class="param-desc">一个Promise，在time毫秒后被resolve</div>
 
-            
+          <dl class="param-type">
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">Promise</span>
+            </dd>
+          </dl>
+        </article>
+      </section>
+    </div>
 
-            
+    <br class="clear" />
 
-            <td class="description last">sleep时间，单位毫秒</td>
-        </tr>
+    <footer>
+      Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Wed
+      Jun 19 2024 12:08:14 GMT+0800 (中国标准时间) using the
+      <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    </footer>
 
-    
-    </tbody>
-</table>
+    <script>
+      prettyPrint();
+    </script>
+    <script src="scripts/polyfill.js"></script>
+    <script src="scripts/linenumber.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5 class="h5-returns">Returns:</h5>
-
-        
-<div class="param-desc">
-    一个Promise，在time毫秒后被resolve
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-    
-    
-</div>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Wed Jun 19 2024 12:08:14 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
-</footer>
-
-<script>prettyPrint();</script>
-<script src="scripts/polyfill.js"></script>
-<script src="scripts/linenumber.js"></script>
-
-<script src="scripts/search.js" defer></script>
-
-
-
-</body>
+    <script src="scripts/search.js" defer></script>
+  </body>
 </html>

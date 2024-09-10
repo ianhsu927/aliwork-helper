@@ -23,21 +23,14 @@ import { searchFormDatasAll } from "./data-source";
  *
  * @returns {Object} 用于查询目标表单的条件参数
  */
-function resolveConditionMap(
-  context,
-  conditionMap,
-  tableFieldId,
-  changeItemIndex
-) {
+function resolveConditionMap(context, conditionMap, tableFieldId, changeItemIndex) {
   const searchParams = {};
 
   if (!Array.isArray(conditionMap)) {
     return searchParams;
   }
   if (tableFieldId && changeItemIndex === undefined) {
-    console.warn(
-      "[resolveConditionMap]: 传入了子表唯一标识时必须传入子表行下标"
-    );
+    console.warn("[resolveConditionMap]: 传入了子表唯一标识时必须传入子表行下标");
   }
 
   let subformData = {};
@@ -225,9 +218,7 @@ async function dataLinkageSubform(
   }
 
   // 1.组装查询参数
-  const changeItemIndex = (context.$(tableFieldId).getItems() || []).indexOf(
-    formGroupId
-  );
+  const changeItemIndex = (context.$(tableFieldId).getItems() || []).indexOf(formGroupId);
   let searchParams = {};
   if (Array.isArray(conditionMap)) {
     searchParams = resolveConditionMap(

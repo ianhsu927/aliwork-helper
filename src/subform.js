@@ -50,9 +50,7 @@ class Subform {
    * @private
    */
   noInstanceError() {
-    throw Error(
-      `无法获取到唯一标识为${this.tableFieldId}的子表单，请检查标识是否正确`
-    );
+    throw Error(`无法获取到唯一标识为${this.tableFieldId}的子表单，请检查标识是否正确`);
   }
 
   /**
@@ -190,7 +188,7 @@ class Subform {
         ignoreDuplicate: true,
         filter: () => true,
       },
-      option
+      option,
     );
 
     const subformDataList = this.getDatas();
@@ -206,10 +204,7 @@ class Subform {
       }
 
       // 跳过空数据
-      if (
-        option.ignoreEmpty &&
-        (fieldData === null || fieldData === undefined)
-      ) {
+      if (option.ignoreEmpty && (fieldData === null || fieldData === undefined)) {
         continue;
       }
 
@@ -224,10 +219,7 @@ class Subform {
           // 跳过空数据
           if (option.ignoreEmpty && fieldData === "") break;
           // 跳过重复数据
-          if (
-            option.ignoreDuplicate &&
-            sumData.some((item) => item === fieldData)
-          ) {
+          if (option.ignoreDuplicate && sumData.some((item) => item === fieldData)) {
             break;
           }
 
@@ -273,10 +265,7 @@ class Subform {
         case "dpt":
           for (const dpt of fieldData) {
             // 跳过重复数据
-            if (
-              option.ignoreDuplicate &&
-              sumData.some((item) => item.value === dpt.value)
-            ) {
+            if (option.ignoreDuplicate && sumData.some((item) => item.value === dpt.value)) {
               continue;
             }
             sumData.push(dpt);
@@ -315,14 +304,7 @@ class Subform {
  *   sum2Main(this, "tableField_xyz", "textField_123", "textField_abc", "string", { appendMode: true });
  * }
  */
-function sum2Main(
-  context,
-  tableFieldId,
-  fieldInSubform,
-  fieldInMainform,
-  dataType,
-  option
-) {
+function sum2Main(context, tableFieldId, fieldInSubform, fieldInMainform, dataType, option) {
   dataType = dataType || "string";
   option = Object.assign(
     {
@@ -332,7 +314,7 @@ function sum2Main(
       filter: () => true,
       separator: ",",
     },
-    option
+    option,
   );
 
   const subform = new Subform(context, tableFieldId);
@@ -367,10 +349,7 @@ function sum2Main(
           const workId = employee.value || employee.key;
           if (!workId) return;
           // 跳过重复数据
-          if (
-            option.ignoreDuplicate &&
-            sumData.some((item) => (item.value || item.key) === workId)
-          )
+          if (option.ignoreDuplicate && sumData.some((item) => (item.value || item.key) === workId))
             return;
           sumData.unshift(employee);
         });
@@ -380,11 +359,7 @@ function sum2Main(
         const existData = fieldData || [];
         existData.forEach((dpt) => {
           // 跳过重复数据
-          if (
-            option.ignoreDuplicate &&
-            sumData.some((item) => item.value === dpt.value)
-          )
-            return;
+          if (option.ignoreDuplicate && sumData.some((item) => item.value === dpt.value)) return;
           sumData.unshift(dpt);
         });
         break;
@@ -423,13 +398,7 @@ function sum2Main(
  * @param {Object} mainFormData 主表数据，如果来源是关联表单子表则该字段传主表数据，否则传null
  * @returns {Object} 新的表单数据对象
  */
-function resolveFieldMaps(
-  formData,
-  fieldMaps,
-  mainFormData,
-  associateForm,
-  formInstIdField
-) {
+function resolveFieldMaps(formData, fieldMaps, mainFormData, associateForm, formInstIdField) {
   const dataItem = {
     [formInstIdField]: associateForm.instanceId,
   };
@@ -518,14 +487,12 @@ async function associateForm2Subform(
   fieldMaps,
   isDataFromSubform,
   remoteSubformId,
-  options
+  options,
 ) {
   formType = formType || "form";
   options = Object.assign({ keepOldData: true }, options);
   if (isDataFromSubform && !remoteSubformId) {
-    throw new Error(
-      "remoteSubformId is reqired while isDataFromSubform is set to true"
-    );
+    throw new Error("remoteSubformId is reqired while isDataFromSubform is set to true");
   }
 
   const associateForm = context.$(assocaiteFieldId).getValue() || [];
@@ -543,7 +510,7 @@ async function associateForm2Subform(
   }
   console.log(
     `%c[关联表单填充子表]需要从${formShouldInsert.length}个关联表单新增数据`,
-    "color: purple"
+    "color: purple",
   );
 
   // 2.找到需要从子表删除哪些关联表单数据，并删除
@@ -560,10 +527,7 @@ async function associateForm2Subform(
       removedDataCount += 1;
     }
   }
-  console.log(
-    `%c[关联表单填充子表]移除${removedDataCount}条子表数据`,
-    "color: purple"
-  );
+  console.log(`%c[关联表单填充子表]移除${removedDataCount}条子表数据`, "color: purple");
 
   // 3.获取关联表单数据，组装子表
   for (const form of formShouldInsert) {
@@ -571,32 +535,17 @@ async function associateForm2Subform(
     if (isDataFromSubform) {
       const subformDataList = formData[remoteSubformId] || [];
       for (const subformData of subformDataList) {
-        const newDataItem = resolveFieldMaps(
-          subformData,
-          fieldMaps,
-          null,
-          form,
-          formInstIdField
-        );
+        const newDataItem = resolveFieldMaps(subformData, fieldMaps, null, form, formInstIdField);
         newSubformDataList.push(newDataItem);
       }
     } else {
-      const newDataItem = resolveFieldMaps(
-        formData,
-        fieldMaps,
-        null,
-        form,
-        formInstIdField
-      );
+      const newDataItem = resolveFieldMaps(formData, fieldMaps, null, form, formInstIdField);
       newSubformDataList.push(newDataItem);
     }
   }
 
   context.$(localSubformId).setValue(newSubformDataList);
-  console.log(
-    `%c[关联表单填充子表]新增了${newSubformDataList.length}条子表数据`,
-    "color: purple"
-  );
+  console.log(`%c[关联表单填充子表]新增了${newSubformDataList.length}条子表数据`, "color: purple");
 }
 
 export { Subform, sum2Main, associateForm2Subform };
